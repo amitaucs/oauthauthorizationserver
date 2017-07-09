@@ -1,0 +1,11 @@
+---
+spring:
+  profiles:
+    active: qa
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: amisoft-config-server
+      username: amisoft
+      password: amisoftpass

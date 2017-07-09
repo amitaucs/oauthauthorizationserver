@@ -2,9 +2,6 @@ package com.amisoft.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by amitdatta on 04/05/17.
- */
 
 @Entity
 @Table(name = "t_employee")

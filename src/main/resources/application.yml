@@ -1,12 +1,8 @@
 ---
 server:
-  port: 9000
-  context-path: /services
+  port: 9002
 security:
-  #user:
-    #name: amisoft
-    #password: amisoftpass
-    #role: USER
+
   oauth2:
     client:
       client-id: clientamisoft
@@ -15,15 +11,21 @@ security:
       scope: read,report
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/amisoft
-    username: root
-    password: root
+    url: jdbc:mysql://127.0.0.1:3306/amisoft  #your database url. Replace "xxx.x.x.x" with your ip address.
+    username: root #database schema user name
+    password: root #database schema password
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
       naming:
         strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  cloud:
+    consul:
+      host: ${consul.host}
+      port: 8500
+  application:
+    name: amisoft-oauth-server
 
 
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect

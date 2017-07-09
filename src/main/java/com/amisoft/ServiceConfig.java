@@ -10,9 +10,7 @@ import org.springframework.security.config.annotation.authentication.configurers
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-/**
- * Created by amitdatta on 03/05/17.
- */
+
 @Configuration
 public class ServiceConfig  extends GlobalAuthenticationConfigurerAdapter{
 
@@ -24,13 +22,6 @@ public class ServiceConfig  extends GlobalAuthenticationConfigurerAdapter{
 
         auth.authenticationProvider(authProvider());
 
-/*
-
-
-        auth.inMemoryAuthentication()
-                .withUser("john").password("johnpass").roles("USER").and()
-                .withUser("jonny").password("jonnypass").roles("USER", "OPERATOR");
-*/
 
 
     }
