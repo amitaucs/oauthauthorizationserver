@@ -1,16 +1,7 @@
 ---
 server:
   port: 9001
-security:
 
-  oauth2:
-    client:
-      client-id: clientamisoft
-      client-secret: clientamisoftsecret
-      authorized-grant-types: authorization_code,refresh_token,password,client_credentials
-      scope: read
-  user:
-    role: USER
 spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/amisoft  #your database url. Replace "xxx.x.x.x" with your ip address.
@@ -28,6 +19,17 @@ spring:
       port: 8500
   application:
     name: amisoft-oauth-server
-
+security:
+  oauth2:
+    client:
+      client-id: clientamisoft
+      client-secret: clientamisoftsecret
+      authorized-grant-types: authorization_code,refresh_token,password,client_credentials
+      scope: read
+  user:
+    role: USER
+  basic:
+    enabled: true
 
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
