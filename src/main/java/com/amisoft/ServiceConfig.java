@@ -40,4 +40,18 @@ public class ServiceConfig  extends GlobalAuthenticationConfigurerAdapter{
        // authenticationProvider.setPasswordEncoder(passwordEncoder());
         return authenticationProvider;
     }
+
+
+
+  //Sample code for in memory user
+ /* @Override
+  public void init(AuthenticationManagerBuilder auth) throws Exception {
+
+      auth.inMemoryAuthentication()
+              .withUser("jonny").password("jonnypass").roles("USER").and()
+              .withUser("john").password("johnpass").roles("USER");
+
+  }*/
+
+
 }
