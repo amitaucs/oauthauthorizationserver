@@ -19,6 +19,9 @@ spring:
       port: ${consul.port}
   application:
     name: amisoft-oauth-server
+  sleuth:
+    sampler:
+      percentage: ${zipkin.sleuth.sampler.percentage}
 security:
   oauth2:
     client:
